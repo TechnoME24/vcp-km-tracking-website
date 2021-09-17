@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Pfila Adventure - Login{% endblock %}
+
+{% block content %}
+<div class="login">
+    <h2 class="title">login</h2>
+    <h2>{{message}}</h2>
+    <form action="#", method="POST">
+        <p><input type="password" name="passwd" placeholder="Passwort" class="input"/></p>
+        
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for msg in messages %}
+                    <p class="flash-1">{{msg}}</p>
+                {% endfor %}
+            {% endif %} 
+        {% endwith %}
+
+        <p><input type="submit" value="anmelden" class="btn btn-login"></p>
+
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+.input {
+    background-color: var(--black1);
+    border-color: transparent;
+    color: var(--lightGrey);
+    outline: transparent;
+}
+
+.distance {
+    text-align: right;
+    background-color: transparent;
+    width: 65px;
+}
+
+.distance-t {
+    margin: 0px 45% 10px;
+}
+
+.dropdown {
+    margin: 0 0 20px;
+}
+
+.btn-back {
+    color: var(--red);
+    margin: 0px 0px 5px;
+    margin-left: 1050px;
+}
+
+.btn-login {
+    margin: 16px 0px 20px;
+}
+
+
+.btn-logout {
+    color: var(--lightGrey);
+    background-color: var(--black1);
+}
+
+
+.btn-input {
+    color: var(--lightGrey);
+    background-color: var(--black1);
+}

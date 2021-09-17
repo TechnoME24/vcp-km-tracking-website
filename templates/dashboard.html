@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Pfila Adventure - Dashboard{% endblock %}
+
+{% block content %}
+<h2 class="title">Dashboard</h2>
+
+{% for i in cursor %}
+    <p>{{i}}</p>
+{% endfor %}
+
+<a  class="btn-logout hover btn" href="/logout" role="button">abmelden</a>
+<a  class="btn-input hover btn" href="/input" role="button">input</a>
+
+{% endblock %}

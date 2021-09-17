@@ -1,0 +1,44 @@
+.headding {
+    left: 50%;
+}
+
+.title {
+    margin: 10px 0px 20px;
+    font-size: 45px;
+}
+
+.login {
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    margin: auto;
+    width: 50%;
+}
+
+.t-1 {
+    color: var(--lightGrey);
+    margin:  20px 0px 5px;
+    font-size: 17px;
+}
+
+.flash-1 {
+    color: var(--red);
+    margin: 0;
+}
+
+.btn {
+    background-color: var(--black1);
+    border-color: transparent;
+    color: var(--lightGrey);
+    outline: transparent;
+
+    border-radius: 0;
+    font-size: 16px;
+    padding: 1px 4px 1px;
+}
+
+.btn:hover {
+    transition: 250ms;
+    color: var(--lightGrey);
+    background-color: rgba(0, 0, 0, 0.3);
+}

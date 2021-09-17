@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Pfila Adventure - {% endblock %}
+
+{% block content %}
+<h2 class="title">data</h2>
+<form action="", method="POST">
+    <p class="t-1">Wie viele Kilometer bist du heute Gelaufen?</p>
+    <p class="input distance-t"><input type="number" name="distance" placeholder="10" class="input distance">km</p>
+
+    <p class="t-1">In welcher Sippe bist du?</p>
+    <select name="clan" class="input dropdown">
+        {% for clan in clanList %}
+            <option value={{clan[0]}}>{{clan[1]}}</option>
+        {% endfor %}
+    </select>
+    
+
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p class="flash-1">{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %} 
+
+
+    <p><input type="submit" value="abschicken" class="btn"></p>
+
+    <a  class="btn btn-back" href="/dashboard" role="button">zurück</a>
+</form>
+{% endblock %}
