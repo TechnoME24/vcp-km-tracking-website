@@ -33,12 +33,22 @@ def logout():
     session.pop("passwd", None)
     return redirect(url_for("login"))
 
+@app.route("/")
 @app.route("/dashboard")
 def dashboard():
     if "passwd" in session:
-        return render_template("dashboard.html")
+        return render_template("dashboard.html", scoreJson = "test")
     else:
         return redirect(url_for("login"))
+
+@app.route("/getData")
+def getData():
+    data = []
+    mycursor.execute("SELECT * FROM tbl_distance")
+    for i in mycursor:
+        data.append(i)
+    return str(data)
+
 
 @app.route("/input", methods=["POST", "GET"])
 def userInput():
@@ -62,4 +72,4 @@ def userInput():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, port=8000)
