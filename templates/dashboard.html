@@ -11,4 +11,10 @@
 <a  class="btn-logout hover btn" href="/logout" role="button">abmelden</a>
 <a  class="btn-input hover btn" href="/input" role="button">input</a>
 
+<div class="createTable"></div> <!--table will be ceated here-->
+
+<script type="text/javascript">
+    buildTable('{{scoreJson|tojson}}', 'createTable')
+</script>
+
 {% endblock %}
